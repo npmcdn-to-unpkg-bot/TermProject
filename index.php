@@ -39,5 +39,9 @@
             <button type="submit" class="btn btn-default">Register</button>
           </form>
         </div>
+        <?php
+        // close connection
+        conn = null;
+        ?>
     </body>
 </html>
