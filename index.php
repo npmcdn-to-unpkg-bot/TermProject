@@ -41,46 +41,44 @@ include 'navbar.html';
 <!--          </form>-->
 <!--        </div>-->
 
-<div class="main">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="col-lg-4 contentContainer" style="background-color:lightblue">
+<div class="main" id="wrapper">
+    <div class="container" id="columns">
+<!--        <div class="row-fluid">-->
+            <div class="pin" style="background-color:lightblue">
                 <!--This is just a placeholder to see how images may look-->
                 <a href="images/corgi.jpg">
                     <img src="images/corgi.jpg" alt="Corgi4Lyfe">
                 </a>
             </div>
-            <div class="col-lg-4 contentContainer" style="background-color:red">
+            <div class="pin" style="background-color:red">
                 <!--placeholder to see how linking to an article may look-->
                 <a href="http://www.w3schools.com/" alt="w3">
                     <div class="linkContainer">W3schools</div>
                 </a>
             </div>
-            <div class="col-lg-4 contentContainer" style="background-color:yellow">
+            <div class="pin" style="background-color:yellow">
                 col-lg-4
             </div>
-        </div>
-    </div>
-<!--    use thumbnails?-->
-    <div class="container">
-        <div class="row-fluid">
-            <div class="col-lg-4 col-md-4 contentContainer" style="background-color:lightblue">
-                <!--This is just a placeholder to see how images may look-->
-                <a href="images/corgi.jpg" class="thumbnail">
-                    <img src="images/corgi.jpg" alt="Corgi4Lyfe">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 contentContainer" style="background-color:red">
+            <div class="pin" style="background-color:red">
                 <!--placeholder to see how linking to an article may look-->
-                <a href="http://www.w3schools.com/" class="thumbnail">
+                <a href="http://www.w3schools.com/" alt="w3">
                     <div class="linkContainer">W3schools</div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 contentContainer" style="background-color:yellow">
-                <div class="thumbnail linkContainer">col-lg-4</div>
+            <div class="pin" style="background-color:lightblue">
+                <!--This is just a placeholder to see how images may look-->
+                <a href="images/corgi.jpg">
+                    <img src="images/corgi.jpg" alt="Corgi4Lyfe">
+                </a>
+            </div>
+            <div class="pin" style="background-color:red">
+                <!--placeholder to see how linking to an article may look-->
+                <a href="http://www.w3schools.com/" alt="w3">
+                    <div class="linkContainer">W3schools</div>
+                </a>
             </div>
         </div>
-    </div>
+<!--    </div>-->
 </div>
 
 
