@@ -11,6 +11,7 @@ include 'DbConfig.php';
 <!--<body>-->
 
 <head>
+    <title>UGA Wall</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
@@ -22,24 +23,6 @@ include 'DbConfig.php';
 <?php
 include 'navbar.html';
 ?>
-<!--        <div class="container">-->
-<!--          <h2>Welcome to UGA Wall</h2>-->
-<!--          <form role="form">-->
-<!--            <div class="form-group">-->
-<!--              <label for="email">Email:</label>-->
-<!--              <input type="email" class="form-control" id="email" placeholder="Enter email">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--              <label for="pwd">Password:</label>-->
-<!--              <input type="password" class="form-control" id="pwd" placeholder="Enter password">-->
-<!--            </div>-->
-<!--            <div class="checkbox">-->
-<!--              <label><input type="checkbox"> Remember me</label>-->
-<!--            </div>-->
-<!--            <button type="submit" class="btn btn-default">Submit</button>-->
-<!--            <button type="submit" class="btn btn-default">Register</button>-->
-<!--          </form>-->
-<!--        </div>-->
 
 <div class="main" id="wrapper">
     <div class="container" id="columns">

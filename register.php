@@ -57,7 +57,7 @@
         </form>
         <?php
         // close connection
-        conn = null;
+        $conn = null;
         ?>
     </body>
 </html>
