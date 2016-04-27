@@ -86,6 +86,14 @@
     color: #eaeaea;
 }
 
+.container {
+    color: white;
+    text-align: left;
+    padding-right: 450px;
+    padding-top: 25px;
+    margin-left: auto;
+}
+
 body {
     background-color: #ae1404;
     color: black;
