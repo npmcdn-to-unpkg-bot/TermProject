@@ -16,7 +16,7 @@ include 'DbConfig.php';
     <?php
     include 'navbar.html';
     ?>
-    <div class="formContainer">
+    <div class="container">
       <h2>Welcome to UGA Wall</h2>
       <form role="form">
         <div class="form-group">
