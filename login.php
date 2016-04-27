@@ -31,7 +31,7 @@ include 'DbConfig.php';
           <label><input type="checkbox"> Remember me</label>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-        <button type="submit" class="btn btn-default">Register</button>
+        <a class="btn btn-default" href="register.php">Register</a>
       </form>
     </div>
     <?php

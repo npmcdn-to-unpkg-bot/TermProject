@@ -71,3 +71,22 @@
     padding-bottom: 15px;
     margin-bottom: 5px;
 }
+
+.navbar-default {
+    background-color: black;
+    border-color: black;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #eaeaea;
+}
+
+body {
+    background-color: #ae1404;
+    color: black;
+}
