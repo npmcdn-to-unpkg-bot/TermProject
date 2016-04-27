@@ -18,20 +18,34 @@
 </head>
 <body>
 
-<div class="jumbotron" style="background-color: white">
+<div class="jumbotron" style="background-color: whitesmoke">
 <div class="container-fluid">
     <h1 style="text-align: center"><b>Welcome to UGA Wall</b></h1>
     <p style="text-align: center"><b>Go Dawgs!</b></p>
 </div>
 </div>
 
-<div class="row">
-    <button type="button" class="btn btn-success btn-block" style="padding: 15px">Login</button>
-    <button type="button" class="btn btn-primary btn-block" style="padding: 15px">Registration</button>
-
+<div>
+    <button type="button" class="btn btn-success btn-block btn-lg center-block"
+            style="width: 550px" style="padding: 95px">Login</button>
+    <button type="button" class="btn btn-primary btn-block btn-lg center-block"
+            style="width: 550px" style="padding: 15px">Registration</button>
 </div>
 
-<img src="bulldawg.jpg" class="img-circle img-responsive center-block" style="margin-top: 60px" alt="Georgia Bulldog" width="450" height="350">
+<script>
+
+$(document).ready(function(){
+    $("#img").hide(1000);
+});
+$(document).ready(function(){
+    $("#img").show(1000);
+});
+</script>
+
+<div id="img">
+<img src="bulldawg.jpg" class="img-circle img-responsive center-block"
+     style="margin-top: 60px" alt="Georgia Bulldog" width="450" height="350">
+</div>
 
 </body>
 </html>
