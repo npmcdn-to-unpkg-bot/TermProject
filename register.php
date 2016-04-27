@@ -20,7 +20,7 @@
         ?>
         <div class="container">
             <form class="form-signin" method="post" id="register-form" role="form">
-                <h2 class="form-signin-heading">Register</h2>
+                <h2 class="form-signin-heading">Registration</h2>
                     <div id="error">
                     <!-- error will be shown here ! -->
                     </div>
