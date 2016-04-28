@@ -51,18 +51,20 @@ include 'navbar.html';
 
     // counts how many rows have been counted to put into a <div class="row">
     $switchCounter = 0;
+    $postId = 0;
 
     while ($stmtSelect->fetch())
     {
         echo '<div class="grid-item">
                 <div>' . $message . '</div>
                 <p><i>By user - ' . $username . '</i></p>
-                <div id="c2" class="upvote">
+                <div id="' .$postId . '" class="upvote">
                     <a class="upvote"></a>
                     <span class="count">0</span>
                     <a class="downvote"></a>
                 </div>
               </div>';
+        $postId++;
     }
 
     $stmtSelect->close();
@@ -76,8 +78,14 @@ $conn = null;
 ?>
 
 <script>
-    $('#c1').upvote();
-    $('#c2').upvote();
+    for(var i = 0; i < <?php echo $postId; ?>; i++){
+        //Initializing the upvote counters
+        $("#" + i).upvote();
+        //get the counts of the upvotes for this post and initialize it
+//        $("#" + i).upvote({
+//            count: //todo: get the count
+//        });
+    }
 </script>
 </body>
 </html>
