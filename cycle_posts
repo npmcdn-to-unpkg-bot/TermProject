@@ -43,31 +43,11 @@
 	while ($stmtSelect->fetch()) 
 	{
 		echo "<div class=\"col-md-4\">
-					<div class=\"messagePacket\">
-						<h3>" . $message . "</h3>
-						<p><i>By user - " . $username . "</i></p>
-					</div>
-				</div>";
-		// switch every three rows counted from the database
-		/*if($switchCounter == 3)
-		{
-			// close the previous row
-			echo "</div>";
-			$switchCounter = 0;
-		}
-		// start a new row
-		if($switchCounter == 0)
-		{
-			echo "<div class=\"row\">";
-		}
-		else 
-		{
-			echo "<div class=\"col-md-4\">
-						<p>" . $message . "</p>
-						<p>By user - " . $username . "</p>
-					</div>";
-			$switchCounter++;
-		}*/
+				<div class=\"messagePacket\">
+					<h3>" . $message . "</h3>
+					<p><i>By user - " . $username . "</i></p>
+				</div>
+			</div>";
 	}
 
 	$stmtSelect->close();
