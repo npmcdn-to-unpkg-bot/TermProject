@@ -9,7 +9,7 @@
 
         if ($conn->connect_error)
         {
-            //header("Location: /www/Protelog/Views/Account/error.php");
+            header("Location: landingPage.html");
         }
     // Start the session
     session_start();

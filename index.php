@@ -41,7 +41,7 @@ include 'navbar.html';
 
         if ($conn->connect_error)
         {
-            //header("Location: /www/Protelog/Views/Account/error.php");
+            header("Location: landingPage.html");
         }
     // select users.username, posts.message from users join posts on users.userID = posts.userID
 
