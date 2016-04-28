@@ -14,11 +14,14 @@
 
 .grid-item:hover{
     border: solid 1px black;
+    background-color: white;
     transform: scale(1.1);
     z-index: 50000;
 }
 
 .grid-item img{
+    min-width: 100%;
+    max-width: 100%;
     max-width: 100%;
     max-height: 100%;
 }
