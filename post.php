@@ -13,7 +13,7 @@
         }
     // Start the session
     session_start();
-    $userID = "10";
+    $userID = "4";
     $message = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
