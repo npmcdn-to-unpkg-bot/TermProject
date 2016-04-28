@@ -22,10 +22,10 @@ include 'navbar.html';
 ?>
 
 <div style="text-align:center">
-    <h2 style="color:white">Post messages or links</h2>
+    <h2 style="color:white;text-decoration:underline">What&#39;s on your mind?</h2>
     <form method="post" action="post.php">
-        <textarea name="message" rows="6" cols="50" style="resize:none;margin-bottom:5px"></textarea>
-        <p><input type="submit" value="Post"></p>
+        <textarea name="message" rows="6" cols="100" style="resize:none;margin-bottom:5px"></textarea>
+        <p><input type="submit" class="btn btn-primary" value="Post"><input type="reset" class="btn btn-success" style="margin-left:5px"></p>
     </form>
 </div>
 <div class="grid" id="mainContent">
@@ -46,7 +46,7 @@ include 'navbar.html';
     // select users.username, posts.message from users join posts on users.userID = posts.userID
 
     // Join users and posts tables to match username to message
-    $stmtSelect = $conn->prepare("select users.username, posts.message from users join posts on users.userID = posts.userID");
+    $stmtSelect = $conn->prepare("select users.username, posts.message from users join posts on users.userID = posts.userID order by postID DESC");
     $stmtSelect->execute();
     $stmtSelect->bind_result($username, $message);
 
