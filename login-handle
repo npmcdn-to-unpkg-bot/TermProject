@@ -42,7 +42,7 @@ if ($conn->connect_error)
 } 
 
 // Query db
-$stmtSelect = $conn->prepare("SELECT id, email, password, FROM ugawall_users");
+$stmtSelect = $conn->prepare("SELECT userID, email, password, FROM ugawall_users");
 $stmtSelect->execute();
 $result = $stmtSelect->get_result();
 
