@@ -57,8 +57,8 @@ include 'navbar.html';
     while ($stmtSelect->fetch())
     {
         echo '<div class="grid-item">
-                <div>' . $message . '</div>
-                <p><i>By user - ' . $username . '</i></p>
+                <div style="font-size:24px">' . $message . '</div>
+                <p style="font-size:20px"><i>By user - ' . $username . '</i></p>
                 <div id="' .$postId . '" class="upvote">
                     <a class="upvote"></a>
                     <span class="count">0</span>
