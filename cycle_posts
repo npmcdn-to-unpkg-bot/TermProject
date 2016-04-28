@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+	<link rel="stylesheet" href="assets/css/app.css">
+    <!--    TODO: maybe update the jquery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+
+	<?php
+
+	// get all posts
+	$host     = "localhost";
+	$port     = 3306;
+	$socket   = "";
+	$dbname   = "uga_wall";
+	$connectStatus = "";
+
+	$conn = new mysqli($host, "root", "", $dbname, $port, $socket);
+
+	if ($conn->connect_error) 
+	{
+		//header("Location: /www/Protelog/Views/Account/error.php");
+	} 
+
+
+	// select users.username, posts.message from users join posts on users.userID = posts.userID
+
+	// Join users and posts tables to match username to message
+	$stmtSelect = $conn->prepare("select users.username, posts.message from users join posts on users.userID = posts.userID");
+	$stmtSelect->execute();
+	$stmtSelect->bind_result($username, $message);
+
+	// counts how many rows have been counted to put into a <div class="row">
+	$switchCounter = 0;
+
+	while ($stmtSelect->fetch()) 
+	{
+		echo "<div class=\"col-md-4\">
+					<div class=\"messagePacket\">
+						<h3>" . $message . "</h3>
+						<p><i>By user - " . $username . "</i></p>
+					</div>
+				</div>";
+		// switch every three rows counted from the database
+		/*if($switchCounter == 3)
+		{
+			// close the previous row
+			echo "</div>";
+			$switchCounter = 0;
+		}
+		// start a new row
+		if($switchCounter == 0)
+		{
+			echo "<div class=\"row\">";
+		}
+		else 
+		{
+			echo "<div class=\"col-md-4\">
+						<p>" . $message . "</p>
+						<p>By user - " . $username . "</p>
+					</div>";
+			$switchCounter++;
+		}*/
+	}
+
+	$stmtSelect->close();
+	$conn->close();
+	?>
+	</div>
+
+</body>
+</html>
