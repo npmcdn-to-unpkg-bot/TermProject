@@ -38,11 +38,12 @@ $conn = new mysqli($host, "root", "", $dbname, $port, $socket);
 
 if ($conn->connect_error) 
 {
+	//echo "conn error";
 	//header("Location: /www/Protelog/Views/Account/error.php");
 } 
 
 // Query db
-$stmtSelect = $conn->prepare("SELECT userID, email, password, FROM ugawall_users");
+$stmtSelect = $conn->prepare("SELECT userID, password, email FROM users");
 $stmtSelect->execute();
 $result = $stmtSelect->get_result();
 
@@ -57,17 +58,20 @@ if ($result->num_rows > 0)
 		$email_db = $row["email"];
 		$psswrd_db = $row["password"];
 		
+		echo $email_db;
+		echo $psswrd_db;
+		
 		if($email_db == $email && $psswrd_db == $password)
 		{
 			session_start();
 			
 			// store the username and user id in the session
 			$_SESSION['user'] = $username;
-			$_SESSION['id'] = $row['id'];
+			$_SESSION['id'] = $row['userID'];
 			
 			// success, redirect to home page
 			
-			//header("Location: /www/Protelog/Views/Account/profile.php");
+			header("Location: index.php");
 			exit();
 		}
 		else if($email_db == $email && $psswrd_db != $password)
