@@ -31,22 +31,12 @@ $connectStatus = "";
 
 $conn = new mysqli($host, "root", "", $dbname, $port, $socket);
 
-if ($conn->connect_error) 
-{
-	$connectStatus = "Connection failed: " . $conn->connect_error;
-	//header("Location error.php");
-} 
-else
-{
-	$connectStatus = "Connected to " . $dbname . " successfully";
-}
-
 // Query db
-$stmtSelect = $conn->prepare("SELECT username, email FROM ugawall_users");
+$stmtSelect = $conn->prepare("SELECT username, email FROM users");
 $stmtSelect->execute();
 $result = $stmtSelect->get_result();
 
-$stmtInsert = $conn->prepare("INSERT INTO ugawall_users (username, password, email) VALUES (?, ?, ?)");
+$stmtInsert = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
 $stmtInsert->bind_param("sss", $username, $password, $email);
 
 $user = "";
@@ -74,7 +64,7 @@ if ($result->num_rows > 0)
 		
 		$stmtInsert->execute();
 		$outcome = "Registration successful! <br>Welcome " . $username;
-		//header("Location: /www/Protelog/Views/Account/confirm_email.php");
+		header("Location: index.php");
 		exit();
 	}
 } 

@@ -3,7 +3,7 @@
 	$server = 'localhost';
 	$db_username = 'root';
 	$db_password = '';
-	$database = 'students';
+	$database = 'uga_wall';
 
 try{
     $conn = new PDO("mysql:host=$server;dbname=$database", $db_username, $db_password);

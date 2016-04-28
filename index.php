@@ -1,6 +1,3 @@
-<?php
-include 'DbConfig.php';
-?>
 <html lang="en">
 
 <head>
@@ -24,24 +21,28 @@ include 'DbConfig.php';
 include 'navbar.html';
 ?>
 
+<div style="text-align:center">
+    <h2 style="color:white">Post messages or links</h2>
+    <form method="post" action="post.php">
+        <textarea name="message" rows="6" cols="50" style="resize:none;margin-bottom:5px"></textarea>
+        <p><input type="submit" value="Post"></p>
+    </form>
+</div>
 <div class="grid" id="mainContent">
     <?php
-
     // get all posts
-    $host     = "localhost";
-    $port     = 3306;
-    $socket   = "";
-    $dbname   = "uga_wall";
-    $connectStatus = "";
+        $host     = "localhost";
+        $port     = 3306;
+        $socket   = "";
+        $dbname   = "uga_wall";
+        $connectStatus = "";
 
-    $conn = new mysqli($host, "root", "", $dbname, $port, $socket);
+        $conn = new mysqli($host, "root", "", $dbname, $port, $socket);
 
-    if ($conn->connect_error)
-    {
-        //header("Location: /www/Protelog/Views/Account/error.php");
-    }
-
-
+        if ($conn->connect_error)
+        {
+            //header("Location: /www/Protelog/Views/Account/error.php");
+        }
     // select users.username, posts.message from users join posts on users.userID = posts.userID
 
     // Join users and posts tables to match username to message

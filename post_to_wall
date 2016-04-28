@@ -40,7 +40,5 @@ $stmtInsert->bind_param("ss", $message, $userID);
 // TODO: error check?
 $stmtInsert->execute();
 
-
-$stmtSelect->close();
 $conn->close();
 ?>

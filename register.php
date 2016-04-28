@@ -1,11 +1,8 @@
-<?php
-    include 'DbConfig.php';
-?>
 <html lang="en">
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta charset="UTF-8">
-      <title>Register</title>
+      <title>Registration</title>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
       <link rel="stylesheet" href="assets/css/app.css">
     <!--    TODO: maybe update the jquery library-->
