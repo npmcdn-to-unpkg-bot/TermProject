@@ -13,7 +13,7 @@
         }
     // Start the session
     session_start();
-    $userID = "4"; //todo: make the userID relevant to the session
+    $userID = $_SESSION['id'];
     $message = "";  
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")

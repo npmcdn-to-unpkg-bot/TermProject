@@ -13,7 +13,7 @@ $('document').ready(function()
             },
             password: {
                 required: true,
-                minlength: 8,
+                minlength: 4,
                 maxlength: 15
             },
             cpassword: {
@@ -32,7 +32,7 @@ $('document').ready(function()
                 minlength: "Please enter a username of at least 3 characters."},
             password:{
                 required: "Please provide a password.",
-                minlength: "Password must have at least 8 characters."
+                minlength: "Password must have at least 4 characters."
             },
             user_email: "Please enter a valid email address.",
             cpassword:{

@@ -43,7 +43,7 @@ if ($conn->connect_error)
 } 
 
 // Query db
-$stmtSelect = $conn->prepare("SELECT userID, password, email FROM users");
+$stmtSelect = $conn->prepare("SELECT userID, username, password, email FROM users");
 $stmtSelect->execute();
 $result = $stmtSelect->get_result();
 
@@ -66,7 +66,7 @@ if ($result->num_rows > 0)
 			session_start();
 			
 			// store the username and user id in the session
-			$_SESSION['user'] = $username;
+			$_SESSION['user'] = $row['username'];
 			$_SESSION['id'] = $row['userID'];
 			
 			// success, redirect to home page

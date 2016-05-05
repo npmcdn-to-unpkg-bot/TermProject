@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-    include 'navbar.html';
+    include 'navbar.php';
     ?>
     <div class="container">
       <h2>Welcome to UGA Wall</h2>
