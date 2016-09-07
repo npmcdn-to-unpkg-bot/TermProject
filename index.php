@@ -12,7 +12,7 @@
     <script src="assets/js/jquery.upvote.js"></script>
 <!--    <script src="assets/js/facebook-login.js"></script>-->
 
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/masonry.pkgd.js"></script>
     <script src="assets/js/app.js"></script>
 </head>
